@@ -13,12 +13,12 @@ I created the plugin because I prefer using old-school Apache auth instead of th
     AuthUserFile /path/to/codiad/.htpasswd
     require valid-user
 
-In your config.php you'll have to put something like
+In your `config.php` you'll have to put something like
 
     // External Authentification
     define("AUTH_PATH", dirname(dirname(__FILE__))."/customauth.php");
 
-And in your customauth.php
+And in your `customauth.php`
 
     <?php $_SESSION['user'] = $_SERVER['PHP_AUTH_USER']; ?>
 
